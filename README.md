@@ -1,6 +1,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<h1 align="center">pedidos-ws</h1>
+<h1 align="center">Teste Back-end / integrações</h1>
 <br />
 <br />
 <!-- TABLE OF CONTENTS -->
