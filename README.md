@@ -31,8 +31,6 @@ The objective of the project is to retrieve data from a RESTful WebService via G
 RESTful WebService. This execution is run every <strong>10 seconds<strong>
 
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Java 11](https://docs.oracle.com/en/java/javase/11/)
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Maven](https://maven.apache.org/guides/index.html)
