@@ -13,9 +13,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.hibrido.pedidos.ws.models.v1pedido.request.PedidoRequestBody;
-import com.hibrido.pedidos.ws.models.wspedido.response.PedidoResponseBody;
-import com.hibrido.pedidos.ws.operation.builder.DestinoRequestBuilder;
+import com.hibrido.pedidos.ws.models.destino.request.PedidoDestinoRequestBody;
+import com.hibrido.pedidos.ws.models.origem.response.PedidoOrigemResponseBody;
+import com.hibrido.pedidos.ws.operation.builder.DestinoBuilder;
 
 @EnableScheduling
 @Component
@@ -28,24 +28,24 @@ public class PedidoOperation implements CommandLineRunner {
 	private RestTemplate restTemplate;
 	
 	@Autowired
-	private DestinoRequestBuilder responseBuilder;
+	private DestinoBuilder destinoBuilder;
 
 	@Scheduled(fixedRate = 5000)
 	public void call() {		
 		// fetch from "http://origem.demacode.com.br:8181/WS/Pedido"
-		PedidoResponseBody[] wsPedidoResponse = restTemplate.getForObject(URL_ORIGEM, PedidoResponseBody[].class);
-		List<PedidoResponseBody> wsPedidoResponseLsit = new ArrayList<>();
-		if(wsPedidoResponse != null) {
-			wsPedidoResponseLsit = Arrays.asList(wsPedidoResponse);			
+		PedidoOrigemResponseBody[] origemResponse = restTemplate.getForObject(URL_ORIGEM, PedidoOrigemResponseBody[].class);
+		List<PedidoOrigemResponseBody> origemResponseList = new ArrayList<>();
+		if(origemResponse != null) {
+			origemResponseList = Arrays.asList(origemResponse);			
 		
-			List<PedidoRequestBody> v1PedidoRequestBody = responseBuilder.buildRequest(wsPedidoResponseLsit);
+			List<PedidoDestinoRequestBody> destinoRequestBody = destinoBuilder.buildRequest(origemResponseList);
 			
 			// insert into "http://destino.demacode.com.br:8282/v1/pedido"
 			ResponseEntity<Void> response = new ResponseEntity<Void>(HttpStatus.OK);
-			for(PedidoRequestBody item : v1PedidoRequestBody) {
+			for(PedidoDestinoRequestBody item : destinoRequestBody) {
 				response = restTemplate.postForEntity(URL_DESTINO, item , Void.class);			
 			}
-			System.out.println("WS realizou a requisição e retornou código HTTP: " + response.getStatusCode().toString());
+			System.out.println("WS realizou a requisição POST e retornou código HTTP: " + response.getStatusCode().toString());
 		}
 	}
 

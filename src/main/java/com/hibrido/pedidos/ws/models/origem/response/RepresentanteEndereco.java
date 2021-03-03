@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.wspedido.response;
+package com.hibrido.pedidos.ws.models.origem.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.v1pedido.request;
+package com.hibrido.pedidos.ws.models.destino.request;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "valorFrete",
     "valorTotal"
 })
-public class PedidoRequestBody {
+public class PedidoDestinoRequestBody {
 
     @JsonProperty("cpfCnpjCliente")
     private String cpfCnpjCliente;

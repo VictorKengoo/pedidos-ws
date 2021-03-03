@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.wspedido.response;
+package com.hibrido.pedidos.ws.models.origem.response;
 
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "valorDesconto",
     "valorFrete"
 })
-public class PedidoResponseBody {
+public class PedidoOrigemResponseBody {
 
     @JsonProperty("cliente")
     private Cliente cliente;

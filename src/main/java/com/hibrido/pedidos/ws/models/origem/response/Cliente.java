@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.wspedido.response;
+package com.hibrido.pedidos.ws.models.origem.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -13,14 +13,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "nome",
     "telefone"
 })
-public class Representante {
+public class Cliente {
 
     @JsonProperty("cpfCnpj")
     private String cpfCnpj;
     @JsonProperty("email")
     private String email;
     @JsonProperty("endereco")
-    private RepresentanteEndereco endereco;
+    private Endereco endereco;
     @JsonProperty("nome")
     private String nome;
     @JsonProperty("telefone")
@@ -47,12 +47,12 @@ public class Representante {
     }
 
     @JsonProperty("endereco")
-    public RepresentanteEndereco getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
     @JsonProperty("endereco")
-    public void setEndereco(RepresentanteEndereco endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 

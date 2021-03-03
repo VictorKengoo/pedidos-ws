@@ -1,3 +1,4 @@
+package com.hibrido.pedidos.ws.models.origem.response;
 //
 //package com.hibrido.pedidos.ws.models.wspedido.response;
 //

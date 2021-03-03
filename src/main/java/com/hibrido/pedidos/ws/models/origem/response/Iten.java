@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.v1pedido.request;
+package com.hibrido.pedidos.ws.models.origem.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,30 +7,40 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "precoUnitario",
+    "codigo",
+    "preco",
     "quantidade",
-    "sku",
     "valorTotal"
 })
-public class Produto {
+public class Iten {
 
-    @JsonProperty("precoUnitario")
-    private Integer precoUnitario;
+    @JsonProperty("codigo")
+    private String codigo;
+    @JsonProperty("preco")
+    private Integer preco;
     @JsonProperty("quantidade")
     private Integer quantidade;
-    @JsonProperty("sku")
-    private String sku;
     @JsonProperty("valorTotal")
     private Integer valorTotal;
 
-    @JsonProperty("precoUnitario")
-    public Integer getPrecoUnitario() {
-        return precoUnitario;
+    @JsonProperty("codigo")
+    public String getCodigo() {
+        return codigo;
     }
 
-    @JsonProperty("precoUnitario")
-    public void setPrecoUnitario(Integer precoUnitario) {
-        this.precoUnitario = precoUnitario;
+    @JsonProperty("codigo")
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    @JsonProperty("preco")
+    public Integer getPreco() {
+        return preco;
+    }
+
+    @JsonProperty("preco")
+    public void setPreco(Integer preco) {
+        this.preco = preco;
     }
 
     @JsonProperty("quantidade")
@@ -41,16 +51,6 @@ public class Produto {
     @JsonProperty("quantidade")
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
-    }
-
-    @JsonProperty("sku")
-    public String getSku() {
-        return sku;
-    }
-
-    @JsonProperty("sku")
-    public void setSku(String sku) {
-        this.sku = sku;
     }
 
     @JsonProperty("valorTotal")

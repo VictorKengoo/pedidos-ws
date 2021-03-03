@@ -5,23 +5,23 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.hibrido.pedidos.ws.models.v1pedido.request.EnderecoEntrega;
-import com.hibrido.pedidos.ws.models.v1pedido.request.PedidoRequestBody;
-import com.hibrido.pedidos.ws.models.v1pedido.request.Produto;
-import com.hibrido.pedidos.ws.models.wspedido.response.Endereco;
-import com.hibrido.pedidos.ws.models.wspedido.response.Iten;
-import com.hibrido.pedidos.ws.models.wspedido.response.PedidoResponseBody;
+import com.hibrido.pedidos.ws.models.destino.request.EnderecoEntrega;
+import com.hibrido.pedidos.ws.models.destino.request.PedidoDestinoRequestBody;
+import com.hibrido.pedidos.ws.models.destino.request.Produto;
+import com.hibrido.pedidos.ws.models.origem.response.Endereco;
+import com.hibrido.pedidos.ws.models.origem.response.Iten;
+import com.hibrido.pedidos.ws.models.origem.response.PedidoOrigemResponseBody;
 
 @Component
-public class DestinoRequestBuilder {
-	public List<PedidoRequestBody> buildRequest(List<PedidoResponseBody> pedidoResponse) {
+public class DestinoBuilder {
+	public List<PedidoDestinoRequestBody> buildRequest(List<PedidoOrigemResponseBody> pedidoOrigemResponse) {
 		Integer valorTotal = 0;
 		
-		PedidoRequestBody requestBody = new PedidoRequestBody();
-		List<PedidoRequestBody> request = new ArrayList<>();
+		PedidoDestinoRequestBody requestBody = new PedidoDestinoRequestBody();
+		List<PedidoDestinoRequestBody> request = new ArrayList<>();
 		
-		if (!pedidoResponse.equals(null)) {
-			for(PedidoResponseBody item : pedidoResponse) {
+		if (!pedidoOrigemResponse.equals(null)) {
+			for(PedidoOrigemResponseBody item : pedidoOrigemResponse) {
 				List<Iten> itensList = item.getItens();
 				if(itensList != null && !itensList.isEmpty()) {					
 					for(Iten iten : itensList) {

@@ -1,0 +1,25 @@
+{
+  "cpfCnpjCliente": "string",
+  "cpfCnpjRepresentante": "string",
+  "enderecoEntrega": {
+    "bairro": "string",
+    "cidade": "string",
+    "complemento": "string",
+    "logradouro": "string",
+    "numero": "string",
+    "pais": "string",
+    "uf": "string"
+  },
+  "numero": "string",
+  "produtos": [
+    {
+      "precoUnitario": 0,
+      "quantidade": 0,
+      "sku": "string",
+      "valorTotal": 0
+    }
+  ],
+  "valorDesconto": 0,
+  "valorFrete": 0,
+  "valorTotal": 100
+}

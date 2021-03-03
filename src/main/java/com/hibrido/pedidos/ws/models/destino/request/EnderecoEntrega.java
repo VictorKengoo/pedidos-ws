@@ -1,5 +1,5 @@
 
-package com.hibrido.pedidos.ws.models.v1pedido.request;
+package com.hibrido.pedidos.ws.models.destino.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
