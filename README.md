@@ -1,7 +1,8 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-<h1 align="center">PEDIDOS-WS</h1>
-
+<h1 align="center">pedidos-ws</h1>
+<br />
+<br />
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
