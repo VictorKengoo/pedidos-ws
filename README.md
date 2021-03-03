@@ -5,7 +5,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <h1 align="center">PEDIDOS-WS</ h13>
+      <h1 align="center">PEDIDOS-WS</h1>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
