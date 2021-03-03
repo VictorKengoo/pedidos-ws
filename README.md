@@ -48,11 +48,11 @@ This section should list any major frameworks that you built your project using.
    git clone https://github.com/VictorKengoo/pedidos-ws.git
    ```
 2. Import project into your favorite <strong>IDE<strong>
-3. Run the class <strong>PedidosWsApplication.java<strong> as Spring Boot App
+3. Run the class [PedidosWsApplication.java](https://github.com/VictorKengoo/pedidos-ws/blob/master/src/main/java/com/hibrido/pedidos/ws/PedidosWsApplication.java) as Spring Boot App
 4. Watch the <strong>application console<strong>, it should print the <strong>HTTP Response Code<strong> returned from the 
 <strong>"destino"<strong> WebService every 10 seconds (operation execution)
   <br />4.1. In case the first WebService <strong>("origem")<strong> does not return any data, the default code to be shown is 404, whitch means <strong>"NOT FOUND"<strong>
-5. The main flow code is written in the * [PedidoOperation.java](https://github.com/VictorKengoo/pedidos-ws/blob/master/src/main/java/com/hibrido/pedidos/ws/operation/PedidoOperation.java) class
+5. The main flow code is written in the [PedidoOperation.java](https://github.com/VictorKengoo/pedidos-ws/blob/master/src/main/java/com/hibrido/pedidos/ws/operation/PedidoOperation.java) class
 <!-- CONTACT -->
 ## Contact
 
