@@ -17,11 +17,11 @@ public class Iten {
     @JsonProperty("codigo")
     private String codigo;
     @JsonProperty("preco")
-    private Integer preco;
+    private Double preco;
     @JsonProperty("quantidade")
     private Integer quantidade;
     @JsonProperty("valorTotal")
-    private Integer valorTotal;
+    private Double valorTotal;
 
     @JsonProperty("codigo")
     public String getCodigo() {
@@ -34,12 +34,12 @@ public class Iten {
     }
 
     @JsonProperty("preco")
-    public Integer getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
     @JsonProperty("preco")
-    public void setPreco(Integer preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -54,12 +54,12 @@ public class Iten {
     }
 
     @JsonProperty("valorTotal")
-    public Integer getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
 
     @JsonProperty("valorTotal")
-    public void setValorTotal(Integer valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
 

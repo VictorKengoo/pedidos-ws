@@ -15,21 +15,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class Produto {
 
     @JsonProperty("precoUnitario")
-    private Integer precoUnitario;
+    private Double precoUnitario;
     @JsonProperty("quantidade")
     private Integer quantidade;
     @JsonProperty("sku")
     private String sku;
     @JsonProperty("valorTotal")
-    private Integer valorTotal;
+    private Double valorTotal;
 
     @JsonProperty("precoUnitario")
-    public Integer getPrecoUnitario() {
+    public Double getPrecoUnitario() {
         return precoUnitario;
     }
 
     @JsonProperty("precoUnitario")
-    public void setPrecoUnitario(Integer precoUnitario) {
+    public void setPrecoUnitario(Double precoUnitario) {
         this.precoUnitario = precoUnitario;
     }
 
@@ -54,12 +54,12 @@ public class Produto {
     }
 
     @JsonProperty("valorTotal")
-    public Integer getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
 
     @JsonProperty("valorTotal")
-    public void setValorTotal(Integer valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
 

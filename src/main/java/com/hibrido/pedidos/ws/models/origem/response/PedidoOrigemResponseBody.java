@@ -32,9 +32,9 @@ public class PedidoOrigemResponseBody {
     @JsonProperty("representante")
     private Representante representante;
     @JsonProperty("valorDesconto")
-    private Integer valorDesconto;
+    private Double valorDesconto;
     @JsonProperty("valorFrete")
-    private Integer valorFrete;
+    private Double valorFrete;
 
     @JsonProperty("cliente")
     public Cliente getCliente() {
@@ -97,22 +97,22 @@ public class PedidoOrigemResponseBody {
     }
 
     @JsonProperty("valorDesconto")
-    public Integer getValorDesconto() {
+    public Double getValorDesconto() {
         return valorDesconto;
     }
 
     @JsonProperty("valorDesconto")
-    public void setValorDesconto(Integer valorDesconto) {
+    public void setValorDesconto(Double valorDesconto) {
         this.valorDesconto = valorDesconto;
     }
 
     @JsonProperty("valorFrete")
-    public Integer getValorFrete() {
+    public Double getValorFrete() {
         return valorFrete;
     }
 
     @JsonProperty("valorFrete")
-    public void setValorFrete(Integer valorFrete) {
+    public void setValorFrete(Double valorFrete) {
         this.valorFrete = valorFrete;
     }
 

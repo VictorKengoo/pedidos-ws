@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hibrido.pedidos.ws.models.destino.request.PedidoDestinoRequestBody;
 
-//@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class PedidoPostOperationTest {
 
 	private TestRestTemplate restTemplate = new TestRestTemplate();
@@ -35,12 +34,12 @@ class PedidoPostOperationTest {
 				buildDestinoRequestMock("/destinoRequestMockError412.json"), Void.class);
 		assertEquals(response.getStatusCodeValue(), 412);
 	}
-
-	private PedidoDestinoRequestBody buildDestinoRequestMock(String scenario)
+	
+	private Object buildDestinoRequestMock(String scenario)
 			throws JsonParseException, JsonMappingException, IOException {
 
 		InputStream inJson = PedidoDestinoRequestBody.class.getResourceAsStream(scenario);
-		PedidoDestinoRequestBody request = new ObjectMapper().readValue(inJson, PedidoDestinoRequestBody.class);
+		Object request = new ObjectMapper().readValue(inJson, Object.class);
 
 		return request;
 	}

@@ -30,11 +30,11 @@ public class PedidoDestinoRequestBody {
     @JsonProperty("produtos")
     private List<Produto> produtos = null;
     @JsonProperty("valorDesconto")
-    private Integer valorDesconto;
+    private Double valorDesconto;
     @JsonProperty("valorFrete")
-    private Integer valorFrete;
+    private Double valorFrete;
     @JsonProperty("valorTotal")
-    private Integer valorTotal;
+    private Double valorTotal;
 
     @JsonProperty("cpfCnpjCliente")
     public String getCpfCnpjCliente() {
@@ -87,32 +87,32 @@ public class PedidoDestinoRequestBody {
     }
 
     @JsonProperty("valorDesconto")
-    public Integer getValorDesconto() {
+    public Double getValorDesconto() {
         return valorDesconto;
     }
 
     @JsonProperty("valorDesconto")
-    public void setValorDesconto(Integer valorDesconto) {
+    public void setValorDesconto(Double valorDesconto) {
         this.valorDesconto = valorDesconto;
     }
 
     @JsonProperty("valorFrete")
-    public Integer getValorFrete() {
+    public Double getValorFrete() {
         return valorFrete;
     }
 
     @JsonProperty("valorFrete")
-    public void setValorFrete(Integer valorFrete) {
+    public void setValorFrete(Double valorFrete) {
         this.valorFrete = valorFrete;
     }
 
     @JsonProperty("valorTotal")
-    public Integer getValorTotal() {
+    public Double getValorTotal() {
         return valorTotal;
     }
 
     @JsonProperty("valorTotal")
-    public void setValorTotal(Integer valorTotal) {
+    public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
     }
 

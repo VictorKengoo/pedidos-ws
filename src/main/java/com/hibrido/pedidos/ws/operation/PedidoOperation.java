@@ -34,6 +34,7 @@ public class PedidoOperation implements CommandLineRunner {
 	public void call() {		
 		// fetch from "http://origem.demacode.com.br:8181/WS/Pedido"
 		PedidoOrigemResponseBody[] origemResponse = restTemplate.getForObject(URL_ORIGEM, PedidoOrigemResponseBody[].class);
+		
 		List<PedidoOrigemResponseBody> origemResponseList = new ArrayList<>();
 		if(origemResponse != null) {
 			origemResponseList = Arrays.asList(origemResponse);			

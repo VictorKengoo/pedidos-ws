@@ -15,9 +15,8 @@ import com.hibrido.pedidos.ws.models.origem.response.PedidoOrigemResponseBody;
 @Component
 public class DestinoBuilder {
 	public List<PedidoDestinoRequestBody> buildRequest(List<PedidoOrigemResponseBody> pedidoOrigemResponse) {
-		Integer valorTotal = 0;
+		Double valorTotal = 0.0;
 		
-		PedidoDestinoRequestBody requestBody = new PedidoDestinoRequestBody();
 		List<PedidoDestinoRequestBody> request = new ArrayList<>();
 		
 		if (!pedidoOrigemResponse.equals(null)) {
@@ -27,6 +26,7 @@ public class DestinoBuilder {
 					for(Iten iten : itensList) {
 						valorTotal += iten.getValorTotal();
 					}
+					PedidoDestinoRequestBody requestBody = new PedidoDestinoRequestBody();
 					requestBody.setValorTotal(valorTotal);
 					requestBody.setCpfCnpjCliente(item.getCliente().getCpfCnpj());
 					requestBody.setCpfCnpjRepresentante(item.getRepresentante().getCpfCnpj());
@@ -45,17 +45,17 @@ public class DestinoBuilder {
 
 	private List<Produto> buildProducts(List<Iten> itens) {
 		List<Produto> produtos = new ArrayList<>();
-		Produto produto = new Produto();
 
 		if(itens != null && !itens.isEmpty()) {			
 			for(Iten item : itens) {
+				Produto produto = new Produto();
 				produto.setPrecoUnitario(item.getPreco());
 				produto.setQuantidade(item.getQuantidade());
 				produto.setSku(item.getCodigo());
 				produto.setValorTotal(item.getValorTotal());
+				produtos.add(produto);
 			}
-		}		
-		produtos.add(produto);
+		}
 		
 		return produtos;
 	}
