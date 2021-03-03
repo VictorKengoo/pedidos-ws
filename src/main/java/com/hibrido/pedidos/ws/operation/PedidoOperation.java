@@ -29,25 +29,30 @@ public class PedidoOperation implements CommandLineRunner {
 	
 	@Autowired
 	private DestinoBuilder destinoBuilder;
+	
+	private Integer delayCounter = 0;
 
-	@Scheduled(fixedRate = 5000)
-	public void call() {		
-		// fetch from "http://origem.demacode.com.br:8181/WS/Pedido"
-		PedidoOrigemResponseBody[] origemResponse = restTemplate.getForObject(URL_ORIGEM, PedidoOrigemResponseBody[].class);
-		
-		List<PedidoOrigemResponseBody> origemResponseList = new ArrayList<>();
-		if(origemResponse != null) {
-			origemResponseList = Arrays.asList(origemResponse);			
-		
-			List<PedidoDestinoRequestBody> destinoRequestBody = destinoBuilder.buildRequest(origemResponseList);
+	@Scheduled(fixedDelay = 10000)
+	public void call() {
+		if(delayCounter != 0) {				
+			// fetch from "http://origem.demacode.com.br:8181/WS/Pedido"
+			PedidoOrigemResponseBody[] origemResponse = restTemplate.getForObject(URL_ORIGEM, PedidoOrigemResponseBody[].class);
 			
-			// insert into "http://destino.demacode.com.br:8282/v1/pedido"
-			ResponseEntity<Void> response = new ResponseEntity<Void>(HttpStatus.OK);
-			for(PedidoDestinoRequestBody item : destinoRequestBody) {
-				response = restTemplate.postForEntity(URL_DESTINO, item , Void.class);			
+			ResponseEntity<Void> response = new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+			List<PedidoOrigemResponseBody> origemResponseList = new ArrayList<>();
+			if(origemResponse != null) {
+				origemResponseList = Arrays.asList(origemResponse);			
+			
+				List<PedidoDestinoRequestBody> destinoRequestBody = destinoBuilder.buildRequest(origemResponseList);
+				
+				for(PedidoDestinoRequestBody item : destinoRequestBody) {
+					// insert into "http://destino.demacode.com.br:8282/v1/pedido"
+					response = restTemplate.postForEntity(URL_DESTINO, item , Void.class);			
+				}
 			}
 			System.out.println("WS realizou a requisição POST e retornou código HTTP: " + response.getStatusCode().toString());
 		}
+		delayCounter++;
 	}
 
 	@Override
