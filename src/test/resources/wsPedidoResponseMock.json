@@ -1,0 +1,150 @@
+[
+  {
+    "numero": "384000000",
+    "data": "2021-03-02",
+    "hora": "20:33:09.384",
+    "valorFrete": 1,
+    "valorDesconto": 4.57,
+    "representante": {
+      "nome": "Random Representações LTDA.",
+      "cpfCnpj": "87.874.852/0001-65",
+      "telefone": "(47) 93548-9265",
+      "email": "random@demacode.com.br",
+      "endereco": {
+        "rua": "Rua geral",
+        "numero": "540",
+        "cep": null,
+        "cidade": "Guabiruba",
+        "uf": "SC",
+        "pais": null,
+        "bairro": "Geral",
+        "complemento": "Em frente a loja",
+        "latitude": null,
+        "longitude": null,
+        "codigoIbge": null
+      }
+    },
+    "cliente": {
+      "nome": "Artur Ebele",
+      "cpfCnpj": "654.698.987-98",
+      "telefone": "(12) 96545-9898",
+      "email": "teste@demacode.com.br",
+      "endereco": {
+        "rua": "Rua grande",
+        "numero": "234",
+        "cep": null,
+        "cidade": "Gaspar",
+        "uf": "SC",
+        "pais": null,
+        "bairro": "Limeira",
+        "complemento": "Em frente a escola",
+        "latitude": null,
+        "longitude": null,
+        "codigoIbge": null
+      }
+    },
+    "itens": [
+      {
+        "codigo": "AX1004",
+        "quantidade": 5,
+        "preco": 9.31,
+        "valorTotal": 46.55
+      },
+      {
+        "codigo": "AP0005",
+        "quantidade": 1,
+        "preco": 5,
+        "valorTotal": 5
+      },
+      {
+        "codigo": "AX0102",
+        "quantidade": 2,
+        "preco": 16.5,
+        "valorTotal": 33
+      },
+      {
+        "codigo": "AP0006",
+        "quantidade": 2,
+        "preco": 10.5,
+        "valorTotal": 21
+      }
+    ]
+  },
+  {
+    "numero": "384000000",
+    "data": "2021-03-02",
+    "hora": "20:33:09.384",
+    "valorFrete": 13.27,
+    "valorDesconto": 1.07,
+    "representante": {
+      "nome": "Random Representações LTDA.",
+      "cpfCnpj": "87.874.852/0001-65",
+      "telefone": "(47) 93548-9265",
+      "email": "random@demacode.com.br",
+      "endereco": {
+        "rua": "Rua geral",
+        "numero": "540",
+        "cep": null,
+        "cidade": "Guabiruba",
+        "uf": "SC",
+        "pais": null,
+        "bairro": "Geral",
+        "complemento": "Em frente a loja",
+        "latitude": null,
+        "longitude": null,
+        "codigoIbge": null
+      }
+    },
+    "cliente": {
+      "nome": "Abigail Clementina",
+      "cpfCnpj": "756.357.851-98",
+      "telefone": "(40) 93697-9857",
+      "email": "abigail@demacode.com.br",
+      "endereco": {
+        "rua": "Rua dos anjos",
+        "numero": "815",
+        "cep": null,
+        "cidade": "Brusque",
+        "uf": "PR",
+        "pais": null,
+        "bairro": "Centro",
+        "complemento": "Em frente a padaria",
+        "latitude": null,
+        "longitude": null,
+        "codigoIbge": null
+      }
+    },
+    "itens": [
+      {
+        "codigo": "AX0102",
+        "quantidade": 2,
+        "preco": 16.5,
+        "valorTotal": 33
+      },
+      {
+        "codigo": "AP0001",
+        "quantidade": 1,
+        "preco": 15,
+        "valorTotal": 15
+      },
+      {
+        "codigo": "AX0016",
+        "quantidade": 2,
+        "preco": 10,
+        "valorTotal": 20
+      },
+      {
+        "codigo": "AP0003",
+        "quantidade": 3,
+        "preco": 10,
+        "valorTotal": 30
+      },
+      {
+        "codigo": "AP0005",
+        "quantidade": 1,
+        "preco": 5,
+        "valorTotal": 5
+      }
+    ]
+  }
+]
