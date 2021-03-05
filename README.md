@@ -56,8 +56,6 @@ RESTful WebService. This execution is run every <strong>10 seconds<strong>
 
 <strong>Victor Kengoo Morisue Kodama - kodamakengoo@hotmail.com<strong>
 
-Project Link: [https://github.com/VictorKengoo/pedidos-ws](https://github.com/VictorKengoo/pedidos-ws)
-
 <div align="center">
 
 <table>
