@@ -26,12 +26,12 @@ public class PedidoController {
 	private DestinoBuilder destinoBuilder;
 	
 	@Scheduled(fixedDelay = 10000)
-	@GetMapping("/")
+	@GetMapping("/operation")
 	public String operation() {
 		if(delayCounter != 0) {
 			String result = PedidoOperation.call(URL_ORIGEM, URL_DESTINO, restTemplate, destinoBuilder);
 			System.out.println(result);
-			return result;	
+			return result;
 		}
 		delayCounter++;
 		return null;
