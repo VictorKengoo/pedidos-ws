@@ -16,7 +16,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Installation and Testing</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
@@ -40,7 +40,7 @@ RESTful WebService. This execution is run every <strong>10 seconds<strong>
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Installation
+### Installation and Testing
 1. Clone the repo
    ```sh
    git clone https://github.com/VictorKengoo/pedidos-ws.git
