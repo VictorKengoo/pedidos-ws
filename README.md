@@ -16,7 +16,7 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#installation">Installation and Testing</a></li>
+        <li><a href="#installation-and-testing">Installation and Testing</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
